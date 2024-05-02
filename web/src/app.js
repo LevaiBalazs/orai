@@ -24,7 +24,16 @@ function getEmployees(){
 
 function renderTable(){
     state.employeeList.forEach(emp => {
-        console.log(emp.name)
+        var tr = document.createElement("tr")
+        tr.innerHTML =`
+        
+        <td>${emp.id}</td>
+        <td>${emp.name}</td>
+        <td>${emp.city}</td>
+        <td>${emp.salary}</td>
+        
+        `
+        doc.empBody.append(tr)  
     })
     
 }
